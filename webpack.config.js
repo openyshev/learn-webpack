@@ -7,5 +7,12 @@ module.exports = {
         path: outputPath,
         filename: 'my_bundle.js'
     },
+    // module: {
+    //     rules: [
+    //         {
+    //             test: /\.txt$/, use: 'raw-loader'
+    //         }
+    //     ]
+    // },
     mode: 'development'
 };
