@@ -1,8 +1,4 @@
-// import greetings from './greet';
-
-function greetings() {
-    return 'Hello world!';
-};
+import greetings from './greet';
 
 const text = greetings();
 

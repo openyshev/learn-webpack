@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack webpack.config.js",
-    "start": "node ./dist/main.js"
+    "start": "node ./bundles/my_bundle.js"
   },
   "repository": {
     "type": "git",
