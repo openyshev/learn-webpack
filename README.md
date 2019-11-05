@@ -9,6 +9,9 @@
 ```
 - `npm i -s raw-loader`
 - `touch texts.txt`
+- `npm i -s file-loader`
+- добавлен файл `cat.jpeg`
+- `touch index.html`
 
 Скрипты:
 - `npm run build` запускает сборку
