@@ -1,0 +1,24 @@
+{
+  "name": "learn-webpack-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack webpack.config.js",
+    "start": "node ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openyshev/learn-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openyshev/learn-webpack/issues"
+  },
+  "homepage": "https://github.com/openyshev/learn-webpack#readme",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
