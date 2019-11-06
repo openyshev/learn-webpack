@@ -15,6 +15,8 @@
 - `npm i -s url-loader`
 - добавлен файл `dog.png`
 - `npm i -s babel-loader @babel/core @babel/preset-env`
+- `npm i -s typescript ts-loader`
+- `touch tsconfig.json greeter.ts`
 
 Скрипты:
 - `npm run build` запускает сборку

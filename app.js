@@ -16,3 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     div.style = `width: 100px; height: 75px; background-image: url('${dogImage}')`;
     document.body.appendChild(div);
 });
+
+// import greeter from './greeter';
+// console.log(greeter(1));
