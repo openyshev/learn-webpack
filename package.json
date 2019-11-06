@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/openyshev/learn-webpack#readme",
   "dependencies": {
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
     "file-loader": "^4.2.0",
     "raw-loader": "^3.1.0",
     "url-loader": "^2.2.0",

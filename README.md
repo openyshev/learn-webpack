@@ -14,6 +14,7 @@
 - `touch index.html`
 - `npm i -s url-loader`
 - добавлен файл `dog.png`
+- `npm i -s babel-loader @babel/core @babel/preset-env`
 
 Скрипты:
 - `npm run build` запускает сборку
