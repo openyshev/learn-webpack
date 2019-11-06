@@ -17,6 +17,8 @@
 - `npm i -s babel-loader @babel/core @babel/preset-env`
 - `npm i -s typescript ts-loader`
 - `touch tsconfig.json greeter.ts`
+- `npm i -s html-loader`
+- `touch content.html`
 
 Скрипты:
 - `npm run build` запускает сборку

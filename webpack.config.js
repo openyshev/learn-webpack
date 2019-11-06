@@ -34,11 +34,15 @@ module.exports = {
                     }
                 }
             },
-            // { test: /\.ts$/, loader: 'ts-loader' },
+            { test: /\.ts$/, loader: 'ts-loader' },
+            // {
+            //     test: /\.html$/, 
+            //     use: 'html-loader'
+            // },
         ],
     },
-    // resolve: {
-    //     extensions: ['.ts', '.tsx', '.js']
-    // },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     mode: 'development'
 };
