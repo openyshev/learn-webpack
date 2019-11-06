@@ -12,14 +12,17 @@ module.exports = {
             {
                 test: /\.txt$/, use: 'raw-loader'
             },
+            {
+                test: /\.jpeg$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: './bundles'
+                    }
+                }
+            },
             // {
-            //     test: /\.jpeg$/,
-            //     use: {
-            //         loader: 'file-loader',
-            //         options: {
-            //             publicPath: './bundles'
-            //         }
-            //     }
+            //     test: /\.png$/, use: 'url-loader'
             // },
         ],
     },

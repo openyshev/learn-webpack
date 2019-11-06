@@ -12,6 +12,8 @@
 - `npm i -s file-loader`
 - добавлен файл `cat.jpeg`
 - `touch index.html`
+- `npm i -s url-loader`
+- добавлен файл `dog.png`
 
 Скрипты:
 - `npm run build` запускает сборку
