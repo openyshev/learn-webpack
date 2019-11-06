@@ -6,7 +6,7 @@ console.log(text);
 
 import catImage from './cat.jpeg';
 import dogImage from './dog.png';
-// import content from './content.html';
+import content from './content.html';
 
 document.addEventListener('DOMContentLoaded', () => {
     // FILE-LOADER
@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(div);
 
     // HTML-LOADER
-    // const contentDiv = document.createElement('div');
-    // contentDiv.innerHTML = content;
-    // document.body.appendChild(contentDiv);
+    const contentDiv = document.createElement('div');
+    contentDiv.innerHTML = content;
+    document.body.appendChild(contentDiv);
 });
 
+// TS-LOADER
 import greeter from './greeter';
 console.log(greeter(1));
+
+// CSS-LOADER
+// import style from './style.css';
+// console.log(style);

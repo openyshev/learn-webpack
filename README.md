@@ -19,6 +19,8 @@
 - `touch tsconfig.json greeter.ts`
 - `npm i -s html-loader`
 - `touch content.html`
+- `npm i -s css-loader`
+- `touch style.css`
 
 Скрипты:
 - `npm run build` запускает сборку

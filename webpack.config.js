@@ -35,9 +35,13 @@ module.exports = {
                 }
             },
             { test: /\.ts$/, loader: 'ts-loader' },
+            {
+                test: /\.html$/, 
+                use: 'html-loader'
+            },
             // {
-            //     test: /\.html$/, 
-            //     use: 'html-loader'
+            //     test: /\.css$/, 
+            //     use: 'css-loader'
             // },
         ],
     },
