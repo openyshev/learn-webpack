@@ -2,6 +2,6 @@ body {
     background-image: url('./cat.jpeg');
 }
 
-/* img {
+img {
     transform: translateX(30px);
-} */
+}

@@ -39,13 +39,21 @@ module.exports = {
                 test: /\.html$/, 
                 use: 'html-loader'
             },
+            {
+                test: /\.css$/, 
+                use: [
+                    'style-loader', 
+                    { loader: 'css-loader', options: { importLoaders: 1 } }, 
+                    'postcss-loader'
+                ]
+            },
             // {
-            //     test: /\.css$/, 
+            //     test: /\.s[ac]ss$/,
             //     use: [
-            //         'style-loader', 
-            //         { loader: 'css-loader', options: { importLoaders: 1 } }, 
-            //         'postcss-loader'
-            //     ]
+            //         'style-loader',
+            //         'css-loader',
+            //         'sass-loader',
+            //     ],
             // },
         ],
     },

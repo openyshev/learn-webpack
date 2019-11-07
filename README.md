@@ -24,6 +24,8 @@
 - `npm i -s style-loader`
 - `npm i -s postcss-loader autoprefixer`
 - `touch postcss.config.js`
+- `npm i -s sass-loader node-sass`
+- `touch content.sass`
 
 Скрипты:
 - `npm run build` запускает сборку
