@@ -21,6 +21,7 @@
 - `touch content.html`
 - `npm i -s css-loader`
 - `touch style.css`
+- `npm i -s style-loader`
 
 Скрипты:
 - `npm run build` запускает сборку

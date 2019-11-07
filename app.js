@@ -30,5 +30,5 @@ import greeter from './greeter';
 console.log(greeter(1));
 
 // CSS-LOADER
-// import style from './style.css';
-// console.log(style);
+import style from './style.css';
+console.log(style);
