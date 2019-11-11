@@ -1,8 +1,9 @@
 const path = require('path');
 const outputPath = path.join(__dirname, './bundles');
 
+// const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = env === 'production';
@@ -68,7 +69,10 @@ module.exports = {
     },
     plugins: [
         isProduction && new MiniCssExtractPlugin(),
-        // new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(),
+        // new webpack.DefinePlugin({
+        //     ENV: JSON.stringify(env)
+        // })
     ].filter(Boolean),
     mode: 'development'
 };
