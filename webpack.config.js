@@ -1,10 +1,11 @@
 const path = require('path');
 const outputPath = path.join(__dirname, './bundles');
 
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-//const env = process.env.NODE_ENV || 'development';
-//const isProduction = env === 'production';
+const env = process.env.NODE_ENV || 'development';
+const isProduction = env === 'production';
 
 module.exports = {
     entry: './app.js',
@@ -44,14 +45,14 @@ module.exports = {
                 test: /\.html$/, 
                 use: 'html-loader'
             },
-            // {
-            //     test: /\.css$/, 
-            //     use: [
-            //         isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 
-            //         { loader: 'css-loader', options: { importLoaders: 1 } }, 
-            //         'postcss-loader'
-            //     ]
-            // },
+            {
+                test: /\.css$/, 
+                use: [
+                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 
+                    { loader: 'css-loader', options: { importLoaders: 1 } }, 
+                    'postcss-loader'
+                ]
+            },
             {
                 test: /\.s[ac]ss$/,
                 use: [
@@ -65,8 +66,9 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
-    // plugins: [
-    //     isProduction && new MiniCssExtractPlugin()
-    // ].filter(Boolean),
+    plugins: [
+        isProduction && new MiniCssExtractPlugin(),
+        // new HtmlWebpackPlugin()
+    ].filter(Boolean),
     mode: 'development'
 };

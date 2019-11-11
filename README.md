@@ -27,6 +27,7 @@
 - `npm i -s sass-loader node-sass`
 - `touch content.sass`
 - `npm i -s mini-css-extract-plugin`
+- `npm i -s html-webpack-plugin`
 
 Скрипты:
 - `npm run build` запускает сборку
