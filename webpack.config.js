@@ -1,6 +1,11 @@
 const path = require('path');
 const outputPath = path.join(__dirname, './bundles');
 
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+//const env = process.env.NODE_ENV || 'development';
+//const isProduction = env === 'production';
+
 module.exports = {
     entry: './app.js',
     output: {
@@ -39,26 +44,29 @@ module.exports = {
                 test: /\.html$/, 
                 use: 'html-loader'
             },
-            {
-                test: /\.css$/, 
-                use: [
-                    'style-loader', 
-                    { loader: 'css-loader', options: { importLoaders: 1 } }, 
-                    'postcss-loader'
-                ]
-            },
             // {
-            //     test: /\.s[ac]ss$/,
+            //     test: /\.css$/, 
             //     use: [
-            //         'style-loader',
-            //         'css-loader',
-            //         'sass-loader',
-            //     ],
+            //         isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 
+            //         { loader: 'css-loader', options: { importLoaders: 1 } }, 
+            //         'postcss-loader'
+            //     ]
             // },
+            {
+                test: /\.s[ac]ss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
         ],
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
+    // plugins: [
+    //     isProduction && new MiniCssExtractPlugin()
+    // ].filter(Boolean),
     mode: 'development'
 };

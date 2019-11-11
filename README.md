@@ -26,6 +26,7 @@
 - `touch postcss.config.js`
 - `npm i -s sass-loader node-sass`
 - `touch content.sass`
+- `npm i -s mini-css-extract-plugin`
 
 Скрипты:
 - `npm run build` запускает сборку

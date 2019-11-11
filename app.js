@@ -34,4 +34,4 @@ import style from './style.css';
 console.log(style);
 
 // SASS-LOADER
-// import './content.scss';
+import './content.scss';
