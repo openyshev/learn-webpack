@@ -29,6 +29,8 @@
 - `npm i -s mini-css-extract-plugin`
 - `npm i -s html-webpack-plugin`
 - `npm i -s terser-webpack-plugin optimize-css-assets-webpack-plugin`
+- `npm i -s @babel/preset-typescript`
+- `npm i -s fork-ts-checker-webpack-plugin`
 
 Скрипты:
 - `npm run build` запускает сборку

@@ -6,10 +6,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = env === 'production';
-// const isWatch = process.env.WATCH === 'y';
+const isWatch = process.env.WATCH === 'y';
 
 module.exports = {
     entry: './app.js',
@@ -45,6 +46,11 @@ module.exports = {
                 }
             },
             { test: /\.ts$/, loader: 'ts-loader' },
+            // {
+            //     test: /\.(js|ts)$/,
+            //     exclude: /(node_modules)/,
+            //     use: 'babel-loader'
+            // },
             {
                 test: /\.html$/, 
                 use: 'html-loader'
@@ -75,11 +81,12 @@ module.exports = {
         new HtmlWebpackPlugin(),
         new webpack.DefinePlugin({
             ENV: JSON.stringify(env)
-        })
+        }),
+        // new ForkTsCheckerWebpackPlugin()
     ].filter(Boolean),
     optimization: {
         minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },
-    // watch: isWatch,
+    watch: isWatch,
     mode: 'development'
 };
