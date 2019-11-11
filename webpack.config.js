@@ -1,9 +1,11 @@
 const path = require('path');
 const outputPath = path.join(__dirname, './bundles');
 
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const TerserJSPlugin = require('terser-webpack-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = env === 'production';
@@ -70,9 +72,15 @@ module.exports = {
     plugins: [
         isProduction && new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin(),
-        // new webpack.DefinePlugin({
-        //     ENV: JSON.stringify(env)
-        // })
+        new webpack.DefinePlugin({
+            ENV: JSON.stringify(env)
+        })
     ].filter(Boolean),
+    // optimization: {
+    //     minimize: isProduction
+    // },
+    // optimization: {
+    //     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    // }
     mode: 'development'
 };

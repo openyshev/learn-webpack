@@ -37,4 +37,4 @@ console.log(style);
 import './content.scss';
 
 // DEFINE-PLUGIN
-// console.log(ENV);
+console.log(ENV);

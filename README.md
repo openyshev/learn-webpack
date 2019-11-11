@@ -28,6 +28,7 @@
 - `touch content.sass`
 - `npm i -s mini-css-extract-plugin`
 - `npm i -s html-webpack-plugin`
+- `npm i -s terser-webpack-plugin optimize-css-assets-webpack-plugin`
 
 Скрипты:
 - `npm run build` запускает сборку
